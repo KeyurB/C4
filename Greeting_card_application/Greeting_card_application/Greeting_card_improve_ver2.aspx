@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Greeting_card_simple_ver1.aspx.cs" Inherits="Greeting_card_application.Greeting_card_simple_ver1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Greeting_card_improve_ver2.aspx.cs" Inherits="Greeting_card_application.Greeting_card_improve_ver2" %>
 
 <!DOCTYPE html>
 
@@ -42,4 +42,3 @@
 </form>
 </body>
 </html>
-

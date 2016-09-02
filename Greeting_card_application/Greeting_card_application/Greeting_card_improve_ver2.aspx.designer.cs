@@ -10,7 +10,7 @@
 namespace Greeting_card_application {
     
     
-    public partial class Greeting_card_simple_ver1 {
+    public partial class Greeting_card_improve_ver2 {
         
         /// <summary>
         /// lstBackColor control.

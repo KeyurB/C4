@@ -243,3 +243,6 @@ ModelManifest.xml
 
 # FAKE - F# Make
 .fake/
+/Greeting_card_application/Greeting_card_application/Greeting_card_wizard_ver3.aspx
+/Greeting_card_application/Greeting_card_application/Greeting_card_wizard_ver3.aspx.cs
+/Greeting_card_application/Greeting_card_application/Greeting_card_wizard_ver3.aspx.designer.cs

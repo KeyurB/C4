@@ -75,10 +75,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Greeting_card_improve_ver2.aspx" />
     <Content Include="Greeting_card_simple_ver1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Greeting_card_improve_ver2.aspx.cs">
+      <DependentUpon>Greeting_card_improve_ver2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Greeting_card_improve_ver2.aspx.designer.cs">
+      <DependentUpon>Greeting_card_improve_ver2.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Greeting_card_simple_ver1.aspx.cs">
       <DependentUpon>Greeting_card_simple_ver1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

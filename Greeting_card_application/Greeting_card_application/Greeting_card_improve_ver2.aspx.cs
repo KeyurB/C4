@@ -5,46 +5,35 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
+using System.Drawing.Text;
+using System.ComponentModel;
 
 namespace Greeting_card_application
 {
-    public partial class Greeting_card_simple_ver1 : System.Web.UI.Page
+    public partial class Greeting_card_improve_ver2 : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!this.IsPostBack)
             {
-                lstBackColor.Items.Add("White");
-                lstBackColor.Items.Add("Red");
-                lstBackColor.Items.Add("Green");
-                lstBackColor.Items.Add("Blue");
-                lstBackColor.Items.Add("Yellow");
+                string[] colorArray = Enum.GetNames(typeof(KnownColor));
+                lstBackColor.DataSource = colorArray;
+                lstBackColor.DataBind();
 
 
-                lstFontName.Items.Add("Times New Roman");
-                lstFontName.Items.Add("Arial");
-                lstFontName.Items.Add("Verdana");
-                lstFontName.Items.Add("Tahoma");
+                InstalledFontCollection fonts = new InstalledFontCollection();
+                foreach (FontFamily family in fonts.Families)
+                {
+                    lstFontName.Items.Add(family.Name);
+                }
 
 
                 ListItem item = new ListItem();
 
-                item.Text = BorderStyle.None.ToString();
-                item.Value = ((int)BorderStyle.None).ToString();
+                string[] borderStyleArray = Enum.GetNames(typeof(BorderStyle));
+                lstBorder.DataSource = borderStyleArray;
+                lstBorder.DataBind();
 
-                lstBorder.Items.Add(item);
-
-                item = new ListItem();
-                item.Text = BorderStyle.Double.ToString();
-                item.Value = ((int)BorderStyle.Double).ToString();
-
-                lstBorder.Items.Add(item);
-
-                item = new ListItem();
-                item.Text = BorderStyle.Solid.ToString();
-                item.Value = ((int)BorderStyle.Solid).ToString();
-
-                lstBorder.Items.Add(item);
                 lstBorder.SelectedIndex = 0;
                 imgDefault.ImageUrl = "http://www.fnstatic.co.uk/images/source/article/omg-chocolate-cake-1_2.jpg";
             }
@@ -60,9 +49,10 @@ namespace Greeting_card_application
                 lblGreeting.Font.Size =
                 FontUnit.Point(Int32.Parse(txtFontSize.Text));
             }
-
-            int borderValue = Int32.Parse(lstBorder.SelectedItem.Value);
-            pnlCard.BorderStyle = (BorderStyle)borderValue;
+            TypeConverter converter = TypeDescriptor.GetConverter(typeof(BorderStyle));
+            
+            pnlCard.BorderStyle = (BorderStyle)converter.ConvertFromString(lstBorder.SelectedItem.Text);
+            
 
             if (chkPicture.Checked)
             {
