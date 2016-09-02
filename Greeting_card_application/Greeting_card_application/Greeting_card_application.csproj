@@ -9,7 +9,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{EC48A952-CE41-4710-9D9B-AA4E455D1B82}</ProjectGuid>
+    <ProjectGuid>{B86C939D-5979-4CB4-AFDB-FA1C18D70D0C}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -75,17 +75,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Greeting_card_ver1.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Greeting_card_ver1.aspx.cs">
-      <DependentUpon>Greeting_card_ver1.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Greeting_card_ver1.aspx.designer.cs">
-      <DependentUpon>Greeting_card_ver1.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <PropertyGroup>
@@ -101,9 +93,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>52284</DevelopmentServerPort>
+          <DevelopmentServerPort>56338</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:52284/</IISUrl>
+          <IISUrl>http://localhost:56338/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
